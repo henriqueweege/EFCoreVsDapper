@@ -1,0 +1,252 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\EFCoreVsDapper\bin\Release\net8.0\2c1346e0-a01b-46bf-a2e4-6fa742141a90
+// command took 1.42 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\EFCoreVsDapper\bin\Release\net8.0\2c1346e0-a01b-46bf-a2e4-6fa742141a90
+// command took 3.19 sec and exited with 0
+// ***** Done, took 00:00:04 (4.63 sec)   *****
+// Found 3 benchmarks:
+//   EFCoreQueries.LoadAll_With_EagerLoading: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   EFCoreQueries.LoadAll_With_EagerLoading_Using_AsNoTracking: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   EFCoreQueries.LoadAll_With_EagerLoading_Using_AsSplitQuery: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: EFCoreQueries.LoadAll_With_EagerLoading: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 2c1346e0-a01b-46bf-a2e4-6fa742141a90.dll --anonymousPipes 1644 1672 --benchmarkName EFCoreVsDapper.EFCore.EFCoreQueries.LoadAll_With_EagerLoading --job ShortRun --benchmarkId 0 in D:\EFCoreVsDapper\bin\Release\net8.0\2c1346e0-a01b-46bf-a2e4-6fa742141a90\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 203300.00 ns, 203.3000 us/op
+WorkloadJitting  1: 1 op, 1422669500.00 ns, 1.4227 s/op
+
+OverheadJitting  2: 1 op, 500.00 ns, 500.0000 ns/op
+WorkloadJitting  2: 1 op, 189337600.00 ns, 189.3376 ms/op
+
+WorkloadPilot    1: 2 op, 591027200.00 ns, 295.5136 ms/op
+
+WorkloadWarmup   1: 2 op, 428798500.00 ns, 214.3992 ms/op
+WorkloadWarmup   2: 2 op, 157437600.00 ns, 78.7188 ms/op
+WorkloadWarmup   3: 2 op, 158052300.00 ns, 79.0262 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 2 op, 154265500.00 ns, 77.1328 ms/op
+WorkloadActual   2: 2 op, 155296000.00 ns, 77.6480 ms/op
+WorkloadActual   3: 2 op, 144427000.00 ns, 72.2135 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 2 op, 154265500.00 ns, 77.1328 ms/op
+WorkloadResult   2: 2 op, 155296000.00 ns, 77.6480 ms/op
+WorkloadResult   3: 2 op, 144427000.00 ns, 72.2135 ms/op
+// GC:  4 2 1 31429088 2
+// Threading:  0 0 2
+
+// AfterAll
+// Benchmark Process 8148 has exited with code 0.
+
+Mean = 75.665 ms, StdErr = 1.732 ms (2.29%), N = 3, StdDev = 3.000 ms
+Min = 72.213 ms, Q1 = 74.673 ms, Median = 77.133 ms, Q3 = 77.390 ms, Max = 77.648 ms
+IQR = 2.717 ms, LowerFence = 70.597 ms, UpperFence = 81.466 ms
+ConfidenceInterval = [20.934 ms; 130.395 ms] (CI 99.9%), Margin = 54.730 ms (72.33% of Mean)
+Skewness = -0.37, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 2 (66,7%) benchmark(s) to run. Estimated finish 2024-05-04 14:02 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: EFCoreQueries.LoadAll_With_EagerLoading_Using_AsNoTracking: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 2c1346e0-a01b-46bf-a2e4-6fa742141a90.dll --anonymousPipes 1656 1652 --benchmarkName EFCoreVsDapper.EFCore.EFCoreQueries.LoadAll_With_EagerLoading_Using_AsNoTracking --job ShortRun --benchmarkId 1 in D:\EFCoreVsDapper\bin\Release\net8.0\2c1346e0-a01b-46bf-a2e4-6fa742141a90\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 240700.00 ns, 240.7000 us/op
+WorkloadJitting  1: 1 op, 1324267400.00 ns, 1.3243 s/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadJitting  2: 1 op, 93745000.00 ns, 93.7450 ms/op
+
+WorkloadPilot    1: 2 op, 181972000.00 ns, 90.9860 ms/op
+WorkloadPilot    2: 3 op, 220912000.00 ns, 73.6373 ms/op
+WorkloadPilot    3: 4 op, 275036800.00 ns, 68.7592 ms/op
+WorkloadPilot    4: 5 op, 224715400.00 ns, 44.9431 ms/op
+WorkloadPilot    5: 6 op, 248176500.00 ns, 41.3627 ms/op
+WorkloadPilot    6: 7 op, 293794000.00 ns, 41.9706 ms/op
+WorkloadPilot    7: 8 op, 324934900.00 ns, 40.6169 ms/op
+WorkloadPilot    8: 9 op, 366002000.00 ns, 40.6669 ms/op
+WorkloadPilot    9: 10 op, 446997500.00 ns, 44.6998 ms/op
+WorkloadPilot   10: 11 op, 480774300.00 ns, 43.7068 ms/op
+WorkloadPilot   11: 12 op, 500191200.00 ns, 41.6826 ms/op
+
+WorkloadWarmup   1: 12 op, 464982400.00 ns, 38.7485 ms/op
+WorkloadWarmup   2: 12 op, 481934300.00 ns, 40.1612 ms/op
+WorkloadWarmup   3: 12 op, 410835300.00 ns, 34.2363 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 12 op, 417274200.00 ns, 34.7728 ms/op
+WorkloadActual   2: 12 op, 418411000.00 ns, 34.8676 ms/op
+WorkloadActual   3: 12 op, 396655400.00 ns, 33.0546 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 12 op, 417274200.00 ns, 34.7728 ms/op
+WorkloadResult   2: 12 op, 418411000.00 ns, 34.8676 ms/op
+WorkloadResult   3: 12 op, 396655400.00 ns, 33.0546 ms/op
+// GC:  18 4 0 108308896 12
+// Threading:  0 0 12
+
+// AfterAll
+// Benchmark Process 3580 has exited with code 0.
+
+Mean = 34.232 ms, StdErr = 0.589 ms (1.72%), N = 3, StdDev = 1.020 ms
+Min = 33.055 ms, Q1 = 33.914 ms, Median = 34.773 ms, Q3 = 34.820 ms, Max = 34.868 ms
+IQR = 0.906 ms, LowerFence = 32.554 ms, UpperFence = 36.180 ms
+ConfidenceInterval = [15.615 ms; 52.849 ms] (CI 99.9%), Margin = 18.617 ms (54.39% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 1 (33,3%) benchmark(s) to run. Estimated finish 2024-05-04 14:02 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// **************************
+// Benchmark: EFCoreQueries.LoadAll_With_EagerLoading_Using_AsSplitQuery: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 2c1346e0-a01b-46bf-a2e4-6fa742141a90.dll --anonymousPipes 608 1568 --benchmarkName EFCoreVsDapper.EFCore.EFCoreQueries.LoadAll_With_EagerLoading_Using_AsSplitQuery --job ShortRun --benchmarkId 2 in D:\EFCoreVsDapper\bin\Release\net8.0\2c1346e0-a01b-46bf-a2e4-6fa742141a90\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 194400.00 ns, 194.4000 us/op
+WorkloadJitting  1: 1 op, 1098594400.00 ns, 1.0986 s/op
+
+OverheadJitting  2: 1 op, 600.00 ns, 600.0000 ns/op
+WorkloadJitting  2: 1 op, 148642200.00 ns, 148.6422 ms/op
+
+WorkloadPilot    1: 2 op, 350649100.00 ns, 175.3245 ms/op
+WorkloadPilot    2: 3 op, 559898700.00 ns, 186.6329 ms/op
+
+WorkloadWarmup   1: 3 op, 424748100.00 ns, 141.5827 ms/op
+WorkloadWarmup   2: 3 op, 230809300.00 ns, 76.9364 ms/op
+WorkloadWarmup   3: 3 op, 195301200.00 ns, 65.1004 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 3 op, 167091800.00 ns, 55.6973 ms/op
+WorkloadActual   2: 3 op, 170898900.00 ns, 56.9663 ms/op
+WorkloadActual   3: 3 op, 166968800.00 ns, 55.6563 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 3 op, 167091800.00 ns, 55.6973 ms/op
+WorkloadResult   2: 3 op, 170898900.00 ns, 56.9663 ms/op
+WorkloadResult   3: 3 op, 166968800.00 ns, 55.6563 ms/op
+// GC:  6 2 1 43383664 3
+// Threading:  0 0 3
+
+// AfterAll
+// Benchmark Process 5324 has exited with code 0.
+
+Mean = 56.107 ms, StdErr = 0.430 ms (0.77%), N = 3, StdDev = 0.745 ms
+Min = 55.656 ms, Q1 = 55.677 ms, Median = 55.697 ms, Q3 = 56.332 ms, Max = 56.966 ms
+IQR = 0.655 ms, LowerFence = 54.694 ms, UpperFence = 57.314 ms
+ConfidenceInterval = [42.519 ms; 69.694 ms] (CI 99.9%), Margin = 13.588 ms (24.22% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 0 (0,0%) benchmark(s) to run. Estimated finish 2024-05-04 14:02 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Alto desempenho)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\EFCoreVsDapper.EFCore.EFCoreQueries-report.csv
+  BenchmarkDotNet.Artifacts\results\EFCoreVsDapper.EFCore.EFCoreQueries-report-github.md
+  BenchmarkDotNet.Artifacts\results\EFCoreVsDapper.EFCore.EFCoreQueries-report.html
+
+// * Detailed results *
+EFCoreQueries.LoadAll_With_EagerLoading: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 75.665 ms, StdErr = 1.732 ms (2.29%), N = 3, StdDev = 3.000 ms
+Min = 72.213 ms, Q1 = 74.673 ms, Median = 77.133 ms, Q3 = 77.390 ms, Max = 77.648 ms
+IQR = 2.717 ms, LowerFence = 70.597 ms, UpperFence = 81.466 ms
+ConfidenceInterval = [20.934 ms; 130.395 ms] (CI 99.9%), Margin = 54.730 ms (72.33% of Mean)
+Skewness = -0.37, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[72.201 ms ; 77.661 ms) | @@@
+---------------------------------------------------
+
+EFCoreQueries.LoadAll_With_EagerLoading_Using_AsNoTracking: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 34.232 ms, StdErr = 0.589 ms (1.72%), N = 3, StdDev = 1.020 ms
+Min = 33.055 ms, Q1 = 33.914 ms, Median = 34.773 ms, Q3 = 34.820 ms, Max = 34.868 ms
+IQR = 0.906 ms, LowerFence = 32.554 ms, UpperFence = 36.180 ms
+ConfidenceInterval = [15.615 ms; 52.849 ms] (CI 99.9%), Margin = 18.617 ms (54.39% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[33.032 ms ; 34.890 ms) | @@@
+---------------------------------------------------
+
+EFCoreQueries.LoadAll_With_EagerLoading_Using_AsSplitQuery: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 56.107 ms, StdErr = 0.430 ms (0.77%), N = 3, StdDev = 0.745 ms
+Min = 55.656 ms, Q1 = 55.677 ms, Median = 55.697 ms, Q3 = 56.332 ms, Max = 56.966 ms
+IQR = 0.655 ms, LowerFence = 54.694 ms, UpperFence = 57.314 ms
+ConfidenceInterval = [42.519 ms; 69.694 ms] (CI 99.9%), Margin = 13.588 ms (24.22% of Mean)
+Skewness = 0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[55.633 ms ; 56.989 ms) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3527/23H2/2023Update/SunValley3)
+Intel Core i5-10210U CPU 1.60GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK 8.0.101
+  [Host]   : .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+  ShortRun : .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+
+Job=ShortRun  IterationCount=3  LaunchCount=1  
+WarmupCount=3  
+
+| Method                                       | Mean     | Error    | StdDev   | Max      | Rank | Gen0      | Gen1      | Gen2     | Allocated |
+|--------------------------------------------- |---------:|---------:|---------:|---------:|-----:|----------:|----------:|---------:|----------:|
+| LoadAll_With_EagerLoading                    | 75.66 ms | 54.73 ms | 3.000 ms | 77.65 ms |    3 | 2000.0000 | 1000.0000 | 500.0000 |  14.99 MB |
+| LoadAll_With_EagerLoading_Using_AsNoTracking | 34.23 ms | 18.62 ms | 1.020 ms | 34.87 ms |    1 | 1500.0000 |  333.3333 |        - |   8.61 MB |
+| LoadAll_With_EagerLoading_Using_AsSplitQuery | 56.11 ms | 13.59 ms | 0.745 ms | 56.97 ms |    2 | 2000.0000 |  666.6667 | 333.3333 |  13.79 MB |
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Max       : Maximum
+  Rank      : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Gen1      : GC Generation 1 collects per 1000 operations
+  Gen2      : GC Generation 2 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:16 (16.41 sec), executed benchmarks: 3
+
+Global total time: 00:00:21 (21.07 sec), executed benchmarks: 3
+// * Artifacts cleanup *
+Artifacts cleanup is finished
